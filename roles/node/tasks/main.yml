@@ -1,0 +1,10 @@
+---
+
+- name: install curl
+  command: yum install curl
+- name: install node
+  script: script-node.sh
+- name: add key
+  command: rpm --import http://repository.veeam.com/keys/RPM-EFDCEA77
+- name: install nodejs
+  yum : name=nodejs state=present
